@@ -52,8 +52,8 @@ Repeat expansions cause disease through several distinct mechanisms.
 |---|---|---|---|
 | **Toxic RNA gain of function** | Expanded RNA sequesters RNA-binding proteins, causing abnormal splicing | `DMPK` CTG (DM1), `CNBP` CCTG (DM2) | Cardiac conduction disease and arrhythmia are particularly relevant in myotonic dystrophy |
 | **Transcriptional silencing / loss of function** | Expansion-associated chromatin changes reduce gene expression | `FXN` intronic GAA (Friedreich ataxia), `FMR1` full mutation CGG (fragile X syndrome) | For `FXN`, reduced frataxin causes mitochondrial dysfunction and cardiomyopathy; mechanism and inheritance are locus-specific |
-| **Toxic protein gain of function** | Expanded coding repeat produces an abnormal protein (often polyglutamine) | `HTT` CAG and several spinocerebellar ataxia genes | Primarily neurological phenotypes; cardiac association requires locus-specific evidence |
-| **Repeat-associated non-AUG (RAN) translation / RNA toxicity** | Expanded repeats produce abnormal RNA and/or repeat-derived peptides | `C9orf72` GGGGCC, `FMR1` premutation-associated conditions | Mechanisms vary; not automatically cardiac disease genes |
+| **Toxic protein gain of function** | Expanded coding repeat produces an abnormal protein (often polyglutamine) | `HTT` CAG and several spinocerebellar ataxia genes | Primarily neurological phenotypes |
+| **Repeat-associated non-AUG (RAN) translation / RNA toxicity** | Expanded repeats produce abnormal RNA and/or repeat-derived peptides | `C9orf72` GGGGCC, `FMR1` premutation-associated conditions | Mechanisms vary |
 | **Altered gene regulation or other locus-specific effects** | Changes in transcript abundance, splicing or chromatin | Some noncoding repeat disorders | Requires locus-specific experimental and clinical support |
 
 Additional modifiers include repeat interruptions, somatic mosaicism, tissue-specific expansion, age-dependent penetrance and anticipation. Blood-derived repeat lengths may not represent cardiac tissue. For `FXN`, the predominant pathogenic mechanism is **reduced frataxin expression**, not a primary toxic-RNA mechanism; most affected individuals have biallelic pathogenic variants (commonly two expanded GAA alleles, or an expansion in trans with another pathogenic `FXN` allele).
@@ -63,27 +63,25 @@ Additional modifiers include repeat interruptions, somatic mosaicism, tissue-spe
   
 ## 3. Inheritance and interpretation
 
-| Pattern | Examples | What must be established |
+| Pattern | Examples | What established |
 |---|---|---|
 | **Autosomal dominant (AD)** | `DMPK` (DM1), `CNBP` (DM2), `HTT` | One disease-range expanded allele may be sufficient; account for age-dependent penetrance and anticipation |
 | **Autosomal recessive (AR)** | `FXN` (Friedreich ataxia) | **Biallelic** pathogenic variation in trans; one expanded allele usually indicates carrier status rather than a diagnosis |
 | **X-linked** | `FMR1`, `AFF2` | Interpret sex chromosome complement, repeat range, methylation and mosaicism; hemizygosity and heterozygosity are not interchangeable |
 | **Complex / locus-specific** | `RFC1` repeat-associated ataxia | Motif identity and phase matter; two repeat alleles are not necessarily pathogenic unless they have the relevant configuration |
 
-**Do not infer inheritance from the gene name or chromosome alone.** Disease mechanism, pathogenic repeat motif, size range, penetrance, parental origin and sex chromosome status must be interpreted using current locus-specific clinical resources. Male/female labels in job scripts are metadata; they do not replace genotype-based sex-chromosome assessment. For X-linked loci, verify the ploidy and output conventions of the chosen software version and catalog.
-
 ### Repeat-size categories
 
-Categories such as normal, intermediate, premutation and full mutation are **locus-specific**, and sometimes depend on repeat interruptions and methylation. Avoid universal thresholds. For example, intermediate-range `DMPK` alleles should **not** be labelled disease-causing solely because they are more frequent in cases than controls.
-
-## 4. Cardiac disease and sudden cardiac death
-
-| Locus / condition | Inheritance | Established cardiac involvement | Relevance to SCD | Interpretation caution |
-|---|---|---|---|---|
-| **`DMPK` CTG — myotonic dystrophy type 1** | AD | Progressive PR/QRS prolongation, AV block, atrial and ventricular arrhythmias; sometimes cardiomyopathy | **Directly relevant:** conduction disease and arrhythmias can cause sudden death; presentations without obvious neuromuscular signs have been reported | Repeat length alone is an unreliable individual predictor of SCD; assess ECG, family history and confirm expansion |
-| **`CNBP` CCTG — myotonic dystrophy type 2** | AD | Conduction abnormalities and arrhythmias; cardiac involvement generally less prominent than DM1 | Relevant differential diagnosis, with less direct SCD evidence than DM1 | Complex motif and repeat structure may require specialist testing |
-| **`FXN` GAA — Friedreich ataxia** | AR | Hypertrophic cardiomyopathy, myocardial fibrosis, arrhythmias and heart failure | Cardiac complications can contribute to premature death, including sudden death | **One heterozygous expansion is generally insufficient**; evaluate second allele and neurological phenotype |
-| **Other neurological repeat disorders** | Varies | Some have reported cardiac features | Consider only with appropriate phenotype and evidence | Do not presume that every repeat-associated disorder explains unexplained SCD |
+Categories such as normal, intermediate, premutation and full mutation are **locus-specific**, and sometimes depend on repeat interruptions and methylation. Avoid universal thresholds.  
+  
+## 4. Cardiac disease and sudden cardiac death  
+ 
+| Locus / condition | Inheritance | Established cardiac involvement | Relevance to SCD |
+|---|---|---|---|
+| **`DMPK` CTG — myotonic dystrophy type 1** | AD | Progressive PR/QRS prolongation, AV block, atrial and ventricular arrhythmias; sometimes cardiomyopathy | conduction disease and arrhythmias can cause SCD; presentations without obvious neuromuscular signs have been reported |
+| **`CNBP` CCTG — myotonic dystrophy type 2** | AD | Conduction abnormalities and arrhythmias; cardiac involvement generally less prominent than DM1 | Relevant differential diagnosis, with less direct SCD evidence than DM1 |
+| **`FXN` GAA — Friedreich ataxia** | AR | Hypertrophic cardiomyopathy, myocardial fibrosis, arrhythmias and heart failure | Cardiac complications can contribute to premature death, including sudden death **One heterozygous expansion is generally insufficient**; evaluate second allele and neurological phenotype |
+| **Other neurological repeat disorders** | Varies | Some have reported cardiac features | Consider only with appropriate phenotype and evidence |
 
 **Molecular autopsy prioritisation:** For unexplained SCD, especially in a structurally normal heart, prioritise `DMPK` when conduction-system disease, arrhythmia, myotonia, cataracts, family history or unexplained sudden deaths are present. For cardiomyopathy (especially hypertrophic or mitochondrial-like pathology), consider `FXN` if systemic features or biallelic variants support Friedreich ataxia. Evaluate `CNBP` when the clinical presentation is compatible with DM2. Repeat expansions should be considered **alongside**, not instead of, conventional cardiomyopathy/channelopathy variants, structural variants, mitochondrial variants and non-genetic causes.
 
