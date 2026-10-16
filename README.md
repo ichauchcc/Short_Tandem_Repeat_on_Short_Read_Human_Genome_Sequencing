@@ -16,37 +16,37 @@
 5. [Detection strategies](#5-detection-strategies)
 6. [Requirements and Gadi environment](#6-requirements-and-gadi-environment)
 7. [Directory structure](#7-directory-structure)
-8. [Step 1 — input quality control](#8-step-1--input-quality-control)
-9. [Step 2 — known-locus genotyping with ExpansionHunter](#9-step-2--known-locus-genotyping-with-expansionhunter)
-10. [Step 3 — genome-wide discovery with EHdn](#10-step-3--genome-wide-discovery-with-ehdn)
-11. [Step 4 — prioritisation and validation](#11-step-4--prioritisation-and-validation)
+8. [Step 1 - input quality control](#8-step-1--input-quality-control)
+9. [Step 2 - known-locus genotyping with ExpansionHunter](#9-step-2--known-locus-genotyping-with-expansionhunter)
+10. [Step 3 - genome-wide discovery with EHdn](#10-step-3--genome-wide-discovery-with-ehdn)
+11. [Step 4 - prioritisation and validation](#11-step-4--prioritisation-and-validation)
 12. [Reporting and reproducibility](#12-reporting-and-reproducibility)
 13. [Limitations](#13-limitations)
 14. [References and resources](#14-references-and-resources)
 
 ## 1. Overview
 
-STRs are tandem arrays of short nucleotide motifs, often 1–6 bp long; disease-associated tandem repeat expansions can also involve longer repeat units. Expanded alleles may be missed by conventional SNV/indel pipelines because reads map ambiguously and expansions can exceed read or fragment length.
+STRs are tandem arrays of short nucleotide motifs, often 1-6 bp long; disease-associated tandem repeat expansions can also involve longer repeat units. Expanded alleles may be missed by conventional SNV/indel pipelines because reads map ambiguously and expansions can exceed read or fragment length.
 
-This workflow performs **complementary analyses** of aligned, short-read whole-genome sequencing (WGS) data:
+This workflow performs analyses of aligned short-read whole-genome sequencing (WGS) data:
 
 | Method | Objective | Input | Main output | Key limitation |
 |---|---|---|---|---|
 | **ExpansionHunter** | Genotype *specified* STR loci | Indexed BAM/CRAM, matched reference FASTA, variant catalog | Per-locus repeat estimates, VCF, JSON, supporting alignments | Very long/complex expansions and repeat interruptions may be poorly resolved |
 | **ExpansionHunter Denovo** | Detect *candidate* expansions without a predefined locus list | Short-read BAM/CRAM; preferably a comparable cohort | Per-sample STR profiles and cohort outlier/case-control statistics | Does not provide definitive allele sizes or precise locus boundaries |
 
-**Important input distinction:** despite the historical description “WGS FASTA files”, EH and EHdn operate on **aligned sequencing reads (BAM/CRAM)**, not a consensus FASTA. The reference FASTA is a separate required input for EH. Start after the upstream alignment pipeline has produced `sample.final.bam` and its index.
+**Important:** EH and EHdn operate on **aligned sequencing reads (BAM/CRAM)**, not a consensus FASTA. The reference FASTA is a separate required input for EH. Start after the upstream alignment pipeline has produced `sample.final.bam` and its index.
 
 ### Research questions
 
-- Are established disease-associated repeat loci expanded in an individual?
+- Are established disease-associated repeat loci expanded in the tested individual?
 - Are previously uncharacterised repeat motifs/loci unusually abundant in an SCD cohort?
 - Do putative expansions fit an established cardiac phenotype, mechanism and inheritance pattern?
 - Can candidates be confirmed by repeat-primed PCR, long-read sequencing or another validated assay?
 
 ## 2. Biological mechanisms
 
-Repeat expansions cause disease through several distinct mechanisms; **repeat size alone does not establish pathogenicity**.
+Repeat expansions cause disease through several distinct mechanisms.
 
 | Mechanism | Molecular effect | Illustrative loci | Clinical interpretation |
 |---|---|---|---|
@@ -58,6 +58,9 @@ Repeat expansions cause disease through several distinct mechanisms; **repeat si
 
 Additional modifiers include repeat interruptions, somatic mosaicism, tissue-specific expansion, age-dependent penetrance and anticipation. Blood-derived repeat lengths may not represent cardiac tissue. For `FXN`, the predominant pathogenic mechanism is **reduced frataxin expression**, not a primary toxic-RNA mechanism; most affected individuals have biallelic pathogenic variants (commonly two expanded GAA alleles, or an expansion in trans with another pathogenic `FXN` allele).
 
+### Known disease-related STRs list and its distribution in gnomAD v4  
+- https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4  
+  
 ## 3. Inheritance and interpretation
 
 | Pattern | Examples | What must be established |
