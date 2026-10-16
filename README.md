@@ -2,7 +2,7 @@
 
 **Repository:** `Short_Tandem_Repeat_on_Short_Read_Human_Genome_Sequencing`  
 **Platform:** NCI Gadi (PBS Pro)  
-**Primary tools:** ExpansionHunter (EH), ExpansionHunter Denovo (EHdn), samtools, Python  
+**Primary tools:** ExpansionHunter (EH) - ExpansionHunter-v5.0.0-linux_x86_64; ExpansionHunter Denovo (EHdn) - ExpansionHunterDenovo-v0.9.0; samtools - 1.23.1, Python3  
 **Focus:** Human germline short tandem repeat (STR) expansions, with emphasis on inherited cardiac disease and sudden cardiac death (SCD).
 
 > **Research use only.** STR calls are candidates, not molecular diagnoses. Confirm clinically relevant expansions with an orthogonal assay and interpret them in the context of phenotype, inheritance, assay limitations and gene–disease validity.
